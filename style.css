@@ -29,12 +29,11 @@
     width: 1440px;
     margin: 0 auto;
     padding: 30px 130px 0 130px;
-    background: rgb(182,217,255);
-    background: linear-gradient(0deg, rgba(182,217,255,1) 0%, rgba(252,171,149,1) 40%, rgba(242,212,197,1) 100%);
 }
 body{
     font-family: "Josefin Sans";
-   
+    background: rgb(182,217,255);
+    background: linear-gradient(0deg, rgba(182,217,255,1) 0%, rgba(252,171,149,1) 40%, rgba(242,212,197,1) 100%);
 }
 #head{
     width: 100%;
@@ -230,6 +229,10 @@ hr.line1{
     width: 100%;
     height: 760px;
 }
+#review{
+    width: 100%;
+    height: 760px;
+}
 .text_product1{
     font-family: "Noto Sans Thai";
     font-size: 64px;
@@ -267,6 +270,28 @@ hr.line1{
     left: -100px;
     margin-top: 100px;
     float: right;
+}
+.text_product4{
+    font-family: "Noto Sans Thai";
+    font-size: 64px;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    position: relative;
+    color: white;
+    justify-content: center;
+    /*top: -230px;*/
+}
+.text_product5{
+    font-family: "Josefin Sans";
+    font-size: 48px;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    position: relative;
+    color: white;
+    justify-content: center;
+    top: 10px
 }
 #product-image{
     width: 90%;
@@ -410,4 +435,28 @@ hr.line1{
 
 #read-more-btn:hover {
     background-color: #FF4F4F;
+}
+.reviews-container1 {
+    width: 100%;
+    top: -500px;
+    position: relative;
+}
+.review-card1{
+    width: 350px;
+    height: 350px;
+    border: 3px solid white;
+    border-radius: 100%;
+    background: linear-gradient(0deg, rgba(182,217,255,1) 0%, rgba(252,171,149,1) 40%, rgba(242,212,197,1) 100%);
+    position: relative;
+    text-align: center;
+    padding: 60px;
+    color: white;
+    font-family: "Noto Sans Thai";
+    z-index: 2;
+    left: 0px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    /*animation: float 4.5s ease-in-out infinite;*/
+    cursor: default;
+    float: left;
 }
