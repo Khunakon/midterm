@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function selectImage(imageFileName) {
+    const selectedImage = document.getElementById('selectedImage');
+    selectedImage.src = `images/${imageFileName}`;
+}
+    </script>
+</head>
+<body>
+    <div class="color-palette">
+        <button class="color-button" style="background-color: #f06292;" onclick="selectImage('1-F15970.jpg')"></button>
+        <button class="color-button" style="background-color: #e57373;" onclick="selectImage('Lip_18/6-BE302C.jpg')"></button>
+        <button class="color-button" style="background-color: #ba68c8;" onclick="selectImage('Lip_18/3-D8323C.jpg')"></button>
+        <!-- เพิ่มปุ่มสำหรับสีอื่นๆ จนครบ 18 ปุ่ม -->
+    </div>
+    
+    <div>
+        <img id="selectedImage" src="Lip_18/1-F15970.jpg" alt="Selected Image">
+    </div>
+    
+</body>
+</html>

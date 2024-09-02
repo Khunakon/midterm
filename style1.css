@@ -1,0 +1,322 @@
+*{
+    box-sizing: border-box;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+    
+}
+#wrapper{
+    width: 1440px;
+    margin: 0 auto;
+    padding: 30px 130px 0 130px;
+    background: rgb(182,217,255);
+    background: linear-gradient(0deg, rgba(182,217,255,1) 0%, rgba(252,171,149,1) 40%, rgba(242,212,197,1) 100%);
+}
+body{
+    font-family: "Josefin Sans";
+   
+}
+#head{
+    width: 100%;
+    
+}
+.logo{
+    width: 30%;
+    height: auto;
+    float: left;
+}
+#menu{
+    justify-content: center;
+}
+.menu {
+    width: 500px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.332);
+    opacity: 3.5;
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.menu-item {
+    flex: 1;
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+
+.menu-item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 35px;
+    text-decoration: none;
+    color: #F26C65;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+.menu-item.active a,
+.menu-item:hover a {
+    color: rgb(255, 255, 255);
+}
+
+.menu-item.active::before,
+.menu-item:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #F26C65;
+    border-radius: 50px;
+    z-index: 0;
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover::before {
+    width: 100%;
+}
+
+.menu-item.active::before {
+    width: 100%;
+}
+
+.menu-item:not(.active)::before {
+    width: 0;
+    transition: width 0.3s ease;
+}
+#linklist{
+    float: right;
+    position: relative;
+    top: -38px;
+}
+#linklist button{
+    background-color: rgba(250, 128, 114, 0); 
+    border: 2px solid white;
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-family:  "Josefin Sans";
+    margin-right: 5px;
+    font-size: 14px;
+    color: white;
+    transition: background-color 0.3s;
+}
+#linklist button:hover{
+    background-color: white;
+    color: #F26C65;
+    cursor: pointer;
+}
+#product{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.text_product1{
+    font-family: "Noto Sans Thai";
+    font-size: 64px;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    position: relative;
+    color: white;
+    justify-content: center;
+    
+    left: 200px;
+}
+.text_product2{
+    font-family: "Josefin Sans";
+    font-size: 48px;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    position: relative;
+    color: white;
+    justify-content: center;
+    top: 100px;
+    left: 200px;
+}
+.text_product3{
+    font-family: "Noto Sans Thai";
+    font-size: 18px;
+    text-align: left;
+    width: 560px;
+    height: auto;
+    position: relative;
+    color: white;
+    justify-content: center;
+    top: 100px;
+    left: -100px;
+    margin-top: 100px;
+    float: right;
+}
+#product-image{
+    width: 90%;
+    height: auto;
+    float: left;
+    z-index: 1;
+    position: relative;
+    top: -100px;
+    transform: scaleX(-1);
+    left: -255px;
+    animation: float 4.5s ease-in-out infinite;
+}
+.color{
+    width: 18%;
+    height: auto;
+    position: relative;
+    
+    left: 60px;
+}
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    width: 300px;
+    height: auto;
+    position: relative;
+    float: right;
+    top: -300px;
+    right: 360px;
+}
+.color-button {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid #cccccc00;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 10;
+}
+.color-button:hover {
+    transform: scale(1.1);
+}
+.color-button.selected {
+    border: 2px solid #ffffff; 
+}
+
+
+#color1 { background-color: #F15970; }
+#color2 { background-color:  #DF4D57; }
+#color3 { background-color: #D8323C; }
+#color4 { background-color: #B5333D; }
+#color5 { background-color: #BA3F38; }
+#color6 { background-color: #BE302C; }
+#color7 { background-color: #B0665B; }
+#color8 { background-color: #CD4A74; }
+#color9 { background-color: #FA6E7B; }
+#color10 { background-color: #923A38; }
+#color11 { background-color: #C3485D; }
+#color12 { background-color: #FF614B; }
+#color13 { background-color: #D97D64; }
+#color14 { background-color: #E57172; }
+#color15 { background-color: #F55D6A; }
+#color16 { background-color: #F59B9A; }
+#color17 { background-color: #FD777E; }
+#color18 { background-color: #FE8568; }
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d6e4ff00;
+    padding: 20px 50px;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #fff;
+    font-size: 18px;
+    top: 20px;
+}
+
+.contact-info,
+.social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact-info p,
+.social-media p {
+    margin: 5px 0;
+    color: #FFFFFF;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    color: white;
+    font-size: 15px;
+}
+.flower{
+    position: static;
+
+}
+
+.lipTexture{
+    width: 180px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    top: 480px;
+    left: 900px;
+}
+.texture_buttom{
+    width: 100px;
+    height: 40px;
+    margin: 10px;
+    color: #F26C65;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-family: "Josefin Sans";
+    font-size: 16px;
+    transition: background-color 0.5s;
+    transition: color 0.5s;
+}
+.texture_buttom:hover{
+    color: white;
+    background-color: #F26C65;
+}
+.line1{
+    border: 2px solid white;
+}

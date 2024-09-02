@@ -1,0 +1,413 @@
+*{
+    box-sizing: border-box;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+    
+}
+#wrapper{
+    width: 1440px;
+    margin: 0 auto;
+    padding: 30px 130px 0 130px;
+    background: rgb(182,217,255);
+    background: linear-gradient(0deg, rgba(182,217,255,1) 0%, rgba(252,171,149,1) 40%, rgba(242,212,197,1) 100%);
+}
+body{
+    font-family: "Josefin Sans";
+   
+}
+#head{
+    width: 100%;
+    
+}
+.logo{
+    width: 30%;
+    height: auto;
+    float: left;
+}
+#menu{
+    justify-content: center;
+}
+.menu {
+    width: 500px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.332);
+    opacity: 3.5;
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.menu-item {
+    flex: 1;
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+
+.menu-item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 35px;
+    text-decoration: none;
+    color: #F26C65;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+.menu-item.active a,
+.menu-item:hover a {
+    color: rgb(255, 255, 255);
+}
+
+.menu-item.active::before,
+.menu-item:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #F26C65;
+    border-radius: 50px;
+    z-index: 0;
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover::before {
+    width: 100%;
+}
+
+.menu-item.active::before {
+    width: 100%;
+}
+
+.menu-item:not(.active)::before {
+    width: 0;
+    transition: width 0.3s ease;
+}
+#linklist{
+    float: right;
+    position: relative;
+    top: -38px;
+}
+#linklist button{
+    background-color: rgba(250, 128, 114, 0); 
+    border: 2px solid white;
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-family:  "Josefin Sans";
+    margin-right: 5px;
+    font-size: 14px;
+    color: white;
+    transition: background-color 0.3s;
+}
+#linklist button:hover{
+    background-color: white;
+    color: #F26C65;
+    cursor: pointer;
+}
+#banner{
+    width: 100%;
+    height: 800px;
+    z-index: 10;
+}
+.textbanner{
+    width: 1180px;
+    height: 800px;
+}
+.lip3d{
+    width: 1180px;
+    height: auto;
+    top: 30px;
+    position: relative;
+    z-index: 5;
+}
+.texth1{
+    font-family: "Noto Sans Thai";
+    text-align: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    margin-top: 30px;
+    font-size: 86px;
+    color: white;
+    position: relative;
+    z-index: 1;
+    top: -650px;
+}
+.texth2{
+    font-family: "Josefin Sans";
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 86px;
+    color: white;
+    position: relative;
+    z-index: 1;
+    top: -650px;
+    float: left;
+}
+.text1  {
+    float: left;
+}
+.text2  {
+    float: right;
+}
+.text3{
+    float: left;
+    color: white;
+    font-family: "Noto Sans Thai";
+    font-size: 20px;
+    width: 31%;
+    text-align: right;
+    margin-top: 100px;    
+}
+.cus_button button{
+    text-decoration: none;
+    float: right;
+    position: relative;
+    justify-content: right;
+    z-index: 5;
+    top: -500px;
+    cursor: pointer;
+    background-color: white;
+    color: #F26C65;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    font-size: 18px;
+    border: none;
+    padding: 20px;
+    font-family: "Josefin Sans";
+    right: 13px;
+    transition: background-color 0.5s;
+}
+.cus_button button:hover{
+    background-color: #f26c65bd;
+    color: white;
+    cursor: pointer;
+}
+hr.line1{
+    border-top: 10px white;
+}
+#product{
+    width: 100%;
+    height: 760px;
+}
+.text_product1{
+    font-family: "Noto Sans Thai";
+    font-size: 64px;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    position: relative;
+    color: white;
+    justify-content: center;
+    top: -230px;
+    left: 200px;
+}
+.text_product2{
+    font-family: "Josefin Sans";
+    font-size: 48px;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    position: relative;
+    color: white;
+    justify-content: center;
+    top: -230px;
+    left: 200px;
+}
+.text_product3{
+    font-family: "Noto Sans Thai";
+    font-size: 18px;
+    text-align: left;
+    width: 560px;
+    height: auto;
+    position: relative;
+    color: white;
+    justify-content: center;
+    top: -230px;
+    left: -100px;
+    margin-top: 100px;
+    float: right;
+}
+#product-image{
+    width: 90%;
+    height: auto;
+    float: left;
+    z-index: 1;
+    position: relative;
+    top: -800px;
+    transform: scaleX(-1);
+    left: -195px;
+}
+.color{
+    width: 18%;
+    height: auto;
+    position: relative;
+    top: -260px;
+    left: 60px;
+}
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    width: 300px;
+    height: auto;
+    position: relative;
+    float: right;
+    top: -1050px;
+    right: 250px;
+}
+.color-button {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid #cccccc00;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 10;
+}
+.color-button:hover {
+    transform: scale(1.1);
+}
+.color-button.selected {
+    border: 2px solid #ffffff; 
+}
+
+
+#color1 { background-color: #F15970; }
+#color2 { background-color:  #DF4D57; }
+#color3 { background-color: #D8323C; }
+#color4 { background-color: #B5333D; }
+#color5 { background-color: #BA3F38; }
+#color6 { background-color: #BE302C; }
+#color7 { background-color: #B0665B; }
+#color8 { background-color: #CD4A74; }
+#color9 { background-color: #FA6E7B; }
+#color10 { background-color: #923A38; }
+#color11 { background-color: #C3485D; }
+#color12 { background-color: #FF614B; }
+#color13 { background-color: #D97D64; }
+#color14 { background-color: #E57172; }
+#color15 { background-color: #F55D6A; }
+#color16 { background-color: #F59B9A; }
+#color17 { background-color: #FD777E; }
+#color18 { background-color: #FE8568; }
+
+
+.reviews-section {
+    text-align: center;
+    width: 100%;
+    height: 1000px;
+    
+}
+.reviews-section h1{
+    font-family: "Noto Sans Thai";
+    font-weight: normal;
+    font-size: 64px;
+    color: white;
+}
+
+.reviews-container {
+    width: 100%;
+    height: 500px;
+    top: -500px;
+    position: relative;
+}
+
+.review-card{
+    width: 350px;
+    height: 350px;
+    border: 3px solid white;
+    border-radius: 100%;
+    background: linear-gradient(0deg, rgba(182,217,255,1) 0%, rgba(252,171,149,1) 40%, rgba(242,212,197,1) 100%);
+    position: relative;
+    text-align: center;
+    padding: 60px;
+    color: white;
+    font-family: "Noto Sans Thai";
+    z-index: 3;
+    left: 0px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    animation: float 4.5s ease-in-out infinite;
+    cursor: default;
+    float: left;
+}
+.review-card:hover{
+    animation: none;
+}
+.review-card h3{
+    font-size: 32px;
+    font-weight: normal;
+    margin-bottom: -5px;
+}
+.review-card p{
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+.review-card i{
+    margin-bottom: -20px;
+    margin-top: -10px;
+}
+#read-more-btn {
+    padding: 10px 20px;
+    font-family: "Josefin Sans";
+    font-size: 16px;
+    background-color: #FF7F7F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    justify-content: center;
+    position: relative;
+    width: 190px;
+    height: 41px;
+    top: 150px;
+    left: -100px;
+}
+
+#read-more-btn:hover {
+    background-color: #FF4F4F;
+}
