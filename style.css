@@ -436,11 +436,13 @@ hr.line1{
 #read-more-btn:hover {
     background-color: #FF4F4F;
 }
+
 .reviews-container1 {
     width: 100%;
     top: -500px;
     position: relative;
 }
+
 .review-card1{
     width: 350px;
     height: 350px;
@@ -459,4 +461,11 @@ hr.line1{
     /*animation: float 4.5s ease-in-out infinite;*/
     cursor: default;
     float: left;
+}
+
+.review-flower1{
+    width: 400px;
+    height: 250px;
+    top: -20px;
+    angle: 20.56 deg;
 }
