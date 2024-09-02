@@ -3,10 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>customize</title>
-    <link rel="stylesheet" href="style.css">
+    <title>product</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.css' integrity='sha512-8BU3emz11z9iF75b10oPjjpamM4Mz23yQFQymbtwyPN3mNWHxpgeqyrYnkIUP6A8KyAj5k2p3MiYLtYqew7gIw==' crossorigin='anonymous'/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet">
+    <script>
+        document.querySelectorAll('.menu-item').forEach(item => {
+    item.addEventListener('click', function() {
+        document.querySelector('.menu-item.active').classList.remove('active');
+        this.classList.add('active');
+    });
+});
+function goToPage(page) {
+            window.location.href = page;
+        }
+        function changLipColor(image){
+            
+        }
+        function updateQuantity(change) {
+    let quantityInput = document.getElementById('quantity');
+    let currentQuantity = parseInt(quantityInput.value);
+
+    
+    let newQuantity = currentQuantity + change;
+
+    
+    if (newQuantity < 1) {
+        newQuantity = 1;
+    }
+
+    
+    quantityInput.value = newQuantity;
+}
+    </script>
 </head>
 <body>
-    
+    <div id="wrapper">
+        <div id="head">
+            <div id="top_content">
+                <div class="logo">
+                    <img src="pic/logo (1).png" alt="logo" class="logo">
+                </div><!--logo-->
+                <div id="menu">
+                  <nav class="menu">
+                  <ul>
+                      <li class="menu-item"><a href="index.html">Home</a></li>
+                      <li class="menu-item"><a href="product.html">Product</a></li>
+                      <li class="menu-item active"><a href="customize.html">Customize</a></li>
+                      <!--<li class="menu-item"><a href="review.html">Review</a></li>-->
+                  </ul>
+                  </nav>
+                </div><!--menu-->
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fa-solid fa-cart-shopping"></i></button>
+                    <div class="dropdown-content">
+                       <div class="cart-item">
+                          <span>Lip Colormuse</span>
+                          <div class="quantity-controls">
+                              <button class="minus-btn" onclick="updateQuantity(-1)">-</button>
+                              <input type="text" id="quantity" value="1" readonly>
+                              <button class="plus-btn" onclick="updateQuantity(1)">+</button>
+                           </div>
+                       </div>
+                        <button class="go-to-cart">go to cart</button>
+                    </div>
+                </div>
+                
+                <!--<div id="linklist">
+                  <button type="button">Login</button>
+                  <button type="button">Sign in</button>
+              </div>-->
+            </div><!--top_content-->
+          </div><!--head-->
+    </div>
 </body>
 </html>

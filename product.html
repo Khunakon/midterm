@@ -43,9 +43,19 @@ function goToPage(page) {
                 </ul>
                 </nav>
               </div><!--menu-->
-              <div id="linklist">
-                <button type="button">Login</button>
-                <button type="button">Sign in</button>
+              <div class="dropdown">
+                <button class="dropbtn"><i class="fa-solid fa-cart-shopping"></i></button>
+                <div class="dropdown-content">
+                   <div class="cart-item">
+                      <span>Lip Colormuse</span>
+                      <div class="quantity-controls">
+                          <button class="minus-btn" onclick="updateQuantity(-1)">-</button>
+                          <input type="text" id="quantity" value="1" readonly>
+                          <button class="plus-btn" onclick="updateQuantity(1)">+</button>
+                       </div>
+                   </div>
+                    <button class="go-to-cart">go to cart</button>
+                </div>
             </div>
           </div><!--top_content-->
         </div><!--head-->
