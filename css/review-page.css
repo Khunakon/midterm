@@ -61,8 +61,8 @@
 }
 
 .review-card2{
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
     border: 3px solid white;
     border-radius: 100%;
     background: rgba(255,255,255,255) 100%;
@@ -86,14 +86,28 @@
     top: -20px;
     angle: 20.56 deg;
 }
-.color-buttonon {
-     width: 35px;
-     height: 35px;
-     border-radius: 50%;
-     border: 2px solid #cccccc00;
-     background-size: cover;
-     background-position: center;
-     cursor: pointer;
-     transition: transform 0.3s ease;
-     z-index: 10;
- }
+
+.lip-color-circle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #cccccc00;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.circle-btn-red {
+    display:block;
+    color: #FF6868;
+    background-color:white;
+    align-content: center;
+}
+
+.circle-btn-white {
+    display:block;
+    color: white;
+    background-color:#FF6868;
+    align-content: center;
+}
