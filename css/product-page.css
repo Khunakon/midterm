@@ -124,6 +124,17 @@
 #color16 { background-color: #F59B9A; }
 #color17 { background-color: #FD777E; }
 #color18 { background-color: #FE8568; }
+
+.lip-color-circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #cccccc00;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
 .footer {
     display: flex;
     justify-content: space-between;
@@ -245,3 +256,62 @@
     margin-top: 20px;
 }
 
+/*uppercasebody {*/
+/*    font-family: 'Josefin Sans', sans-serif;*/
+/*    background: linear-gradient(0deg, rgba(242,212,197,1) 0%, rgba(252,171,149,1) 50%, rgba(182,217,255,1) 100%);*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    height: 100vh;*/
+/*    margin: 0;*/
+/*}*/
+
+.choose-type-container h2 {
+    font-size: 2em;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+
+.type-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+.type-option {
+    font-size: 1.5em;
+    padding: 15px 30px;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.type-option.selected {
+    background-color: #ffffff;
+    color: #d85757;
+}
+
+.type-option:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.type-option.selected:hover {
+    background-color: #ffeaea;
+    color: #c44545;
+}
+
+.buy-button{
+    font-size: 1.5em;
+    padding: 15px 30px;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}

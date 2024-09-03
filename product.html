@@ -25,11 +25,16 @@
         this.classList.add('active');
     });
 });
-function goToPage(page) {
+        function goToPage(page) {
             window.location.href = page;
         }
-        function changLipColor(image){
-            
+        function changeLipColor(button) {
+            document.getElementById("product-image").src = button.getAttribute("data-image");
+        }
+        function selectType(button) {
+            const buttons = document.querySelectorAll('.type-option');
+            buttons.forEach(btn => btn.classList.remove('selected'));
+            button.classList.add('selected');
         }
     </script>
 </head>
@@ -66,12 +71,70 @@ function goToPage(page) {
                 </div>
             </div>
         </nav>
-        <div id="content-2">
-            <div style="z-index:0;padding-left:10px; position:absolute">
-                <img id="decor-1" src="pic/color.png" />
+        <div class="grid-x grid-margin-x">
+            <div class="cell large-6">
+                <div class="grid-x">
+                        <img id="product-image" src="image/default.png" alt="Product Image" style="width: 100%; margin-left: 10%;">
+                </div>
             </div>
-            <div style="z-index:1">
-                <img id="product-image" src="image/default.png" alt="Product Image">
+            <div class="cell large-6">
+                <div class="grid-y" style="margin-top: 15%;">
+                    <div class="cell medium-6">
+                        <div>ColorMuse 250 thb</div>
+                        <div>ให้ริมฝีปากของคุณสะท้อนความงดงามในแบบที่เป็นคุณ ด้วย ColorMuse ลิปสติกที่ออกแบบให้คุณสร้างสรรค์สีสันที่ไม่เหมือนใครปรับแต่งเฉดสีได้ตาม ใจชอบเพื่อให้เข้ากับสไตล์และอารมณ์ในทุกๆ วันไม่ว่าจะเป็นโทนสีธรรมชาติ ที่เรียบหรู หรือสีสันที่โดดเด่นสะดุดตา ColorMuse มอบพลังให้คุณสร้างลุค ที่โดดเด่นในแบบของตัวเอง สวยงามและไม่ซ้ำใครอย่างแท้จริง</div>
+                    </div>
+                    <div class="grid-x cell medium-4">
+                        <div class="cell small-6">
+                            <div style="margin-left: 20px">
+                                Choose Color
+                            </div>
+                            <div style="margin-top: 40px; margin-left: 30px;">
+                                <div>
+                                    <button onclick="changeLipColor(this)" class="lip-color-circle" id="color1" data-image="image/image1.png" ></button>
+                                    <button onclick="changeLipColor(this)" class="lip-color-circle" id="color2" data-image="image/image2.png"></button>
+                                    <button onclick="changeLipColor(this)" class="lip-color-circle" id="color3" data-image="image/image3.png"></button>
+                                    <button onclick="changeLipColor(this)" class="lip-color-circle" id="color4" data-image="image/image4.png"></button>
+                                    <button onclick="changeLipColor(this)" class="lip-color-circle" id="color5" data-image="image/image5.png"></button>
+                                    <button onclick="changeLipColor(this)" class="lip-color-circle" id="color6" data-image="image/image6.png"></button>
+                                    <button onclick="changeLipColor(this)" class="lip-color-circle" id="color7" data-image="image/image7.png"></button>
+                                </div>
+                                <div style="margin-left: 13px">
+                                    <button onclick="changeLipColor(this)" class="lip-color-circle" id="color8" data-image="image/image8.png"></button>
+                                    <button onclick="changeLipColor(this)" class="lip-color-circle" id="color9" data-image="image/image9.png"></button>
+                                    <button onclick="changeLipColor(this)" class="lip-color-circle" id="color10" data-image="image/image10.png"></button>
+                                    <button onclick="changeLipColor(this)" class="lip-color-circle" id="color11" data-image="image/image11.png"></button>
+                                    <button onclick="changeLipColor(this)" class="lip-color-circle" id="color12" data-image="image/image12.png"></button>
+                                    <button onclick="changeLipColor(this)" class="lip-color-circle" id="color13" data-image="image/image13.png"></button>
+                                </div>
+                                <div style="margin-left: 23px">
+                                    <button onclick="changeLipColor(this)" class="lip-color-circle" id="color14" data-image="image/image14.png"></button>
+                                    <button onclick="changeLipColor(this)" class="lip-color-circle" id="color15" data-image="image/image15.png"></button>
+                                    <button onclick="changeLipColor(this)" class="lip-color-circle" id="color16" data-image="image/image16.png"></button>
+                                    <button onclick="changeLipColor(this)" class="lip-color-circle" id="color17" data-image="image/image17.png"></button>
+                                    <button onclick="changeLipColor(this)" class="lip-color-circle" id="color18" data-image="image/image18.png"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="margin-left: 10px;" class="cell small-5">
+                            <div class="choose-type-container">
+                                <h2>Choose Type</h2>
+                                <div class="type-options">
+                                    <button class="type-option selected" onclick="selectType(this)">Balm</button>
+                                    <button class="type-option" onclick="selectType(this)">Matte</button>
+                                    <button class="type-option" onclick="selectType(this)">Satin</button>
+                                    <button class="type-option" onclick="selectType(this)">Creamy</button>
+                                    <button class="type-option" onclick="selectType(this)">Velvet</button>
+                                    <button class="type-option" onclick="selectType(this)">Glossy</button>
+                                </div>
+                            </div>
+                        <div>
+                    </div>
+                    <div class="cell shrink">
+                        <div class="buy-button">Buy</div>
+                    </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

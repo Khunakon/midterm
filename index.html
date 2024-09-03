@@ -18,12 +18,12 @@
     <link rel="stylesheet" href="css/nav-bar.css">
     <script>
         document.querySelectorAll('.menu-item').forEach(item => {
-    item.addEventListener('click', function() {
-        document.querySelector('.menu-item.active').classList.remove('active');
-        this.classList.add('active');
-    });
-});
-function goToPage(page) {
+            item.addEventListener('click', function() {
+                document.querySelector('.menu-item.active').classList.remove('active');
+                this.classList.add('active');
+            });
+        });
+        function goToPage(page) {
             window.location.href = page;
         }
         function changLipColor(image){}
