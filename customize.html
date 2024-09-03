@@ -3,80 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>product</title>
-    <link rel="stylesheet" href="css/product-page.css">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.css' integrity='sha512-8BU3emz11z9iF75b10oPjjpamM4Mz23yQFQymbtwyPN3mNWHxpgeqyrYnkIUP6A8KyAj5k2p3MiYLtYqew7gIw==' crossorigin='anonymous'/>
+    <title>Customize</title>
+    <link rel="stylesheet" href="main.js">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.css'
+          integrity='sha512-8BU3emz11z9iF75b10oPjjpamM4Mz23yQFQymbtwyPN3mNWHxpgeqyrYnkIUP6A8KyAj5k2p3MiYLtYqew7gIw=='
+          crossorigin='anonymous'/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+Thai:wght@100..900&display=swap"
+          rel="stylesheet">
+    <!-- Foundation CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css"
+          crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js"
+            crossorigin="anonymous"></script>
+    <!-- Foundation CSS -->
+    <link rel="stylesheet" href="css/all-page.css">
+    <link rel="stylesheet" href="css/customize-page.css">
+    <link rel="stylesheet" href="css/nav-bar.css">
+    <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
     <script>
         document.querySelectorAll('.menu-item').forEach(item => {
-    item.addEventListener('click', function() {
-        document.querySelector('.menu-item.active').classList.remove('active');
-        this.classList.add('active');
-    });
-});
-function goToPage(page) {
+            item.addEventListener('click', function () {
+                document.querySelector('.menu-item.active').classList.remove('active');
+                this.classList.add('active');
+            });
+        });
+
+        function goToPage(page) {
             window.location.href = page;
         }
-        function changLipColor(image){
-            
+
+        function changLipColor(image) {
+
         }
+
         function updateQuantity(change) {
-    let quantityInput = document.getElementById('quantity');
-    let currentQuantity = parseInt(quantityInput.value);
+            let quantityInput = document.getElementById('quantity');
+            let currentQuantity = parseInt(quantityInput.value);
 
-    
-    let newQuantity = currentQuantity + change;
 
-    
-    if (newQuantity < 1) {
-        newQuantity = 1;
-    }
+            let newQuantity = currentQuantity + change;
 
-    
-    quantityInput.value = newQuantity;
-}
+
+            if (newQuantity < 1) {
+                newQuantity = 1;
+            }
+
+
+            quantityInput.value = newQuantity;
+        }
+
+        function selectType(button) {
+            const buttons = document.querySelectorAll('.type-option');
+            buttons.forEach(btn => btn.classList.remove('selected'));
+            button.classList.add('selected');
+        }
+
+        var colorPicker = new iro.ColorPicker('#color-picker', {
+            layoutDirection: "horizontal",
+            layout: [
+                {
+                    component: iro.ui.Slider,
+                    options: {
+                        borderColor: '#000000',
+                        sliderShape: 'rectangle'
+                    }
+                },
+                {
+                    component: iro.ui.Wheel,
+                    options: {
+                        borderColor: '#ffffff'
+                    }
+                }
+            ]
+        });
     </script>
 </head>
 <body>
-    <div id="wrapper">
-        <div id="head">
-            <div id="top_content">
-                <div class="site-logo">
-                    <img src="pic/logo (1).png" alt="logo" class="site-logo">
-                </div><!--logo-->
-                <div id="menu">
-                  <nav class="menu">
-                  <ul>
-                      <li class="menu-item"><a href="index.html">Home</a></li>
-                      <li class="menu-item"><a href="product.html">Product</a></li>
-                      <li class="menu-item active"><a href="customize.html">Customize</a></li>
-                      <!--<li class="menu-item"><a href="review.html">Review</a></li>-->
-                  </ul>
-                  </nav>
-                </div><!--menu-->
-                <div class="dropdown">
-                    <button class="dropbtn"><i class="fa-solid fa-cart-shopping"></i></button>
-                    <div class="dropdown-content">
-                       <div class="cart-item">
-                          <span>Lip Colormuse</span>
-                          <div class="quantity-controls">
-                              <button class="minus-btn" onclick="updateQuantity(-1)">-</button>
-                              <input type="text" id="quantity" value="1" readonly>
-                              <button class="plus-btn" onclick="updateQuantity(1)">+</button>
-                           </div>
-                       </div>
-                        <button class="go-to-cart">go to cart</button>
+<div id="grid-container">
+    <nav class="grid-x">
+        <div class="cell shrink">
+            <img id="site-logo" src="pic/logo (1).png" alt="logo"/>
+        </div>
+        <div class="cell auto">
+            <div id="site-nav">
+                <ul>
+                    <li class="menu-item active"><a href="index.html">Home</a></li>
+                    <li class="menu-item"><a href="product.html">Product</a></li>
+                    <li class="menu-item"><a href="customize.html">Customize</a></li>
+                    <li class="menu-item"><a href="review.html">Review</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="cart" class="cell shrink">
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fa-solid fa-cart-shopping"></i></button>
+                <div class="dropdown-content">
+                    <div class="cart-item">
+                        <span>Lip Colormuse</span>
+                        <div class="quantity-controls">
+                            <button class="minus-btn" onclick="updateQuantity(-1)">-</button>
+                            <input type="text" id="quantity" value="1" readonly>
+                            <button class="plus-btn" onclick="updateQuantity(1)">+</button>
+                        </div>
                     </div>
+                    <button class="go-to-cart">go to cart</button>
                 </div>
-                
-                <!--<div id="linklist">
-                  <button type="button">Login</button>
-                  <button type="button">Sign in</button>
-              </div>-->
-            </div><!--top_content-->
-          </div><!--head-->
+            </div>
+        </div>
+    </nav>
+    <div class="grid-x grid-x-margin">
+        <div style="background-color: #923A38" class="cell large-5 small-5">
+            <h2>Pick Your Color</h2>
+            <div id="color-picker" class="cell"></div>
+            <div>
+
+            </div>
+            <div>
+
+            </div>
+        </div>
+        <div style="background-color: #B0665B" class="cell large-4 small-4">
+            <img src="customize-image/lipstick-with-flower.png" alt="lipstick-with-flower">
+        </div>
+        <div style="margin-left: 10px;" class="cell large-2 small-2">
+            <div class="choose-type-container">
+                <h2>Choose Type</h2>
+                <div class="type-options">
+                    <button class="type-option selected" onclick="selectType(this)">Balm</button>
+                    <button class="type-option" onclick="selectType(this)">Matte</button>
+                    <button class="type-option" onclick="selectType(this)">Satin</button>
+                    <button class="type-option" onclick="selectType(this)">Creamy</button>
+                    <button class="type-option" onclick="selectType(this)">Velvet</button>
+                    <button class="type-option" onclick="selectType(this)">Glossy</button>
+                </div>
+            </div>
+            <div>
+                <button>Finish</button>
+                <span>250 thb</span>
+            </div>
+        </div>
     </div>
+</div>
 </body>
 </html>

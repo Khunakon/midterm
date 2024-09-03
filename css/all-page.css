@@ -16,7 +16,7 @@
 
 html {
     height: auto;
-    background: linear-gradient(0deg, rgba(182,217,255,1) 0%, rgba(252,171,149,1) 40%, rgba(242,212,197,1) 100%);
+    background: linear-gradient(0deg, rgba(182, 217, 255, 1) 0%, rgba(252, 171, 149, 1) 40%, rgba(242, 212, 197, 1) 100%) no-repeat fixed;
 }
 
 body {
