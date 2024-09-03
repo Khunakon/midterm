@@ -1,0 +1,44 @@
+*{ box-sizing: border-box; }
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes jump {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(-10px); }
+
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding:0;
+    height: 100%;
+    font-family: "Josefin Sans";
+    background: rgb(182,217,255);
+    background: linear-gradient(0deg, rgba(182,217,255,1) 0%, rgba(252,171,149,1) 40%, rgba(242,212,197,1) 100%);
+}
+
+.grid-container {
+    margin: 50px auto 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Noto Sans Thai", serif;
+    color: white;
+}
+
+h1 {
+    font-size: 80px;
+}
+h1.sub {
+    font-size: 70px;
+}

@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mid-Project</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="main.js">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.css' integrity='sha512-8BU3emz11z9iF75b10oPjjpamM4Mz23yQFQymbtwyPN3mNWHxpgeqyrYnkIUP6A8KyAj5k2p3MiYLtYqew7gIw==' crossorigin='anonymous'/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Foundation CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js" crossorigin="anonymous"></script>
+    <!-- Foundation CSS -->
+    <link rel="stylesheet" href="css/all-page.css">
+    <link rel="stylesheet" href="css/index-page.css">
+    <link rel="stylesheet" href="css/nav-bar.css">
     <script>
         document.querySelectorAll('.menu-item').forEach(item => {
     item.addEventListener('click', function() {
@@ -21,139 +26,76 @@
 function goToPage(page) {
             window.location.href = page;
         }
-        function changLipColor(image){
-            
-        }
+        function changLipColor(image){}
     </script>
 </head>
 <body>
-    <div id="wrapper">
-        <header>
-            <div id="head">
-              <div id="top_content">
-                  <div class="logo">
-                      <img src="pic/logo (1).png" alt="logo" class="logo">
-                  </div><!--logo-->
-                  <div id="menu">
-                    <nav class="menu">
-                    <ul>
-                        <li class="menu-item active"><a href="index.html">Home</a></li>
-                        <li class="menu-item"><a href="product.html">Product</a></li>
-                        <li class="menu-item"><a href="customize.html">Customize</a></li>
-                        <!--<li class="menu-item"><a href="review.html">Review</a></li>-->
-                    </ul>
-                    </nav>
-                  </div><!--menu-->
-                  <div id="linklist">
-                    <button type="button">Login</button>
-                    <button type="button">Sign in</button>
-                </div>
-              </div><!--top_content-->
-            </div><!--head-->
-            <div id="banner">
-                
-                <div class="textbanner">
-                    <img src="pic/lip3d.gif" alt="lip3d" class="lip3d">
-                    <div class="texth1">
-                        สีสันที่คุณสร้างเองได้
-                    </div><!--text h1-->
-                    <div class="texth2">
-                        <div class="text1">Customize</div>
-                        <div class="text2">Your Shade</div>
-                        <div class="text3">
-                            เลือกลิปสติกในเฉดสีที่เป็นเอกลักษณ์ตามสไตล์ของคุณเอง สร้างลุคที่เป็นตัวเองไม่ซ้ำใคร
+<div class="grid-container">
+    <nav class="grid-x">
+        <div class="cell shrink">
+            <img id="site-logo" src="pic/logo (1).png" alt="logo" />
+        </div>
+        <div class="cell auto">
+            <div id="site-nav">
+                <ul>
+                    <li class="menu-item active"><a href="index.html">Home</a></li>
+                    <li class="menu-item"><a href="product.html">Product</a></li>
+                    <li class="menu-item"><a href="customize.html">Customize</a></li>
+                    <!--<li class="menu-item"><a href="review.html">Review</a></li>-->
+                </ul>
+            </div>
+        </div>
+        <div id="cart" class="cell shrink">
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fa-solid fa-cart-shopping"></i></button>
+                <div class="dropdown-content">
+                    <div class="cart-item">
+                        <span>Lip Colormuse</span>
+                        <div class="quantity-controls">
+                            <button class="minus-btn" onclick="updateQuantity(-1)">-</button>
+                            <input type="text" id="quantity" value="1" readonly>
+                            <button class="plus-btn" onclick="updateQuantity(1)">+</button>
                         </div>
-                    </div><!--text h2-->
-                    <div class="cus_button">
-                           <button type="button" onclick="goToPage('customize.html')">
-                            Customize and Buy Now
-                           </button>
                     </div>
-                </div><!--text banner-->
-            </div><!--banner-->
-        </header>
-        <hr class="line1">
-        <section id="product">
-            <div class="text_product1">
-                เลือกสีที่ใช่ สร้างลุคที่เป็นคุณ
+                    <button class="go-to-cart">go to cart</button>
+                </div>
             </div>
-            <div class="text_product2">
-                Choose Your Shade, Define Your Look
-            </div>
-            <div class="text_product3">
-                นอกจากการปรับแต่งสีลิปสติกได้ตามใจคุณแล้วลิปของเรายังมาพร้อมกับ เฉดสีที่คัดสรรมาเป็นพิเศษถึง 18 สี ซึ่งถูกออกแบบมาเพื่อตอบโจทย์ทุกสไตล์และ ทุกโอกาส ไม่ว่าคุณจะต้องการลุคที่ดูสดใส โดดเด่น หรือสุภาพอ่อนหวานลิปของเรา ก็มีสีที่เหมาะสมรอให้คุณเลือกใช้
-            </div>
-            <img src="pic/color.png" alt="color" class="color">
-            <div class="product-container">
-                <img id="product-image" src="image/default.png" alt="Product Image">
-            </div>
-            <div class="button-container">
-                <button class="color-button" id="color1" data-image="image/image1.png" ></button>
-                <button class="color-button" id="color2" data-image="image/image2.png"></button>
-                <button class="color-button" id="color3" data-image="image/image3.png"></button>
-                <button class="color-button" id="color4" data-image="image/image4.png"></button>
-                <button class="color-button" id="color5" data-image="image/image5.png"></button>
-                <button class="color-button" id="color6" data-image="image/image6.png"></button>
-                <button class="color-button" id="color7" data-image="image/image7.png"></button>
-                <button class="color-button" id="color8" data-image="image/image8.png"></button>
-                <button class="color-button" id="color9" data-image="image/image9.png"></button>
-                <button class="color-button" id="color10" data-image="image/image10.png"></button>
-                <button class="color-button" id="color11" data-image="image/image11.png"></button>
-                <button class="color-button" id="color12" data-image="image/image12.png"></button>
-                <button class="color-button" id="color13" data-image="image/image13.png"></button>
-                <button class="color-button" id="color14" data-image="image/image14.png"></button>
-                <button class="color-button" id="color15" data-image="image/image15.png"></button>
-                <button class="color-button" id="color16" data-image="image/image16.png"></button>
-                <button class="color-button" id="color17" data-image="image/image17.png"></button>
-                <button class="color-button" id="color18" data-image="image/image18.png"></button>
-                
-            </div>
-            <script src="script.js"></script>
-        </section><!--product-->
-        <hr class="line1">
-        <section id="review">
-            <div class="text_product4">
-                รีวิวจากผู้ใช้จริง ความประทับใจที่อยากแชร์
-            </div>
-            <div class="text_product5">
-                Read Real Reviews from ColorMuse Users
-            </div>
-            <div class="reviews-container1">
-                <table>
-                    <tr>
-                        <td>
-                            <div class="review-card1">
-                                <img src="images/review4.png" alt="Reviewer 4">
-                                <p>รีวิวจากผู้ใช้รายที่ 4...</p>
-                            </div>
-                        </td>
-                        <td>
-                            <img src="Hover Interaction - Copy@1-1392x742 (1).png" alt="lip3d" class="review-flower1">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="review-card1">
-                                <img src="images/review4.png" alt="Reviewer 4">
-                                <p>รีวิวจากผู้ใช้รายที่ 34...</p>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="review-card1">
-                                <img src="images/review4.png" alt="Reviewer 4">
-                                <p>รีวิวจากผู้ใช้รายที่ 34...</p>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            </div>
+        </div>
+    </nav>
+    <div class="grid-x" style="margin-top:50px">
+        <h1 class="cell" style="text-align:center">
+            สีสันที่คุณสร้างเองได้
+        </h1>
+        <h1 class="sub cell large-6" style="text-align:right;padding-right:80px">Customize</h1>
+        <h1 class="sub cell large-6" style="text-align:left;padding-left:80px">Your Shade</h1>
+    </div>
+    <div style="margin-top:-250px;margin-left:-60px">
+        <img src="pic/lip3d.gif" alt="lip3d" style="max-width:unset;display:unset"/>
+    </div>
 
-        </section>
-       
-       
-      
-    </div><!--wrapper-->
+</div>
+
+    <!--
+    <div id="banner">
+        <div class="textbanner">
+            <img src="pic/lip3d.gif" alt="lip3d" class="lip3d">
+            <div class="texth1">
+                สีสันที่คุณสร้างเองได้
+            </div>
+            <div class="texth2">
+                <div class="text1">Customize</div>
+                <div class="text2">Your Shade</div>
+                <div class="text3">
+                    เลือกลิปสติกในเฉดสีที่เป็นเอกลักษณ์ตามสไตล์ของคุณเอง สร้างลุคที่เป็นตัวเองไม่ซ้ำใคร
+                </div>
+            </div>
+            <div class="cus_button">
+                <button type="button" onclick="goToPage('customize.html')">
+                    Customize and Buy Now
+                </button>
+            </div>
+        </div>
+    </div>
+    -->
 </body>
 </html>

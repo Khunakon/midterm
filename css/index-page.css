@@ -1,50 +1,7 @@
-*{
-    box-sizing: border-box;
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-@keyframes jump {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(-10px);
-    }
-    
-}
-#wrapper{
-    width: 1440px;
-    margin: 0 auto;
-    padding: 30px 130px 0 130px;
-}
-body{
-    font-family: "Josefin Sans";
-    background: rgb(182,217,255);
-    background: linear-gradient(0deg, rgba(182,217,255,1) 0%, rgba(252,171,149,1) 40%, rgba(242,212,197,1) 100%);
-
-}
 #head{
     width: 100%;
-    
 }
-.site-logo{
-    width: 30%;
-    height: auto;
-    float: left;
-}
+
 #menu{
     justify-content: center;
 }
@@ -151,14 +108,8 @@ ul {
     width: 1180px;
     height: 800px;
 }
-.lip3d{
-    width: 1180px;
-    height: auto;
-    top: 30px;
-    position: relative;
-    z-index: 5;
-}
-.texth1{
+
+.h1-custom {
     font-family: "Noto Sans Thai";
     text-align: center;
     justify-content: center;
@@ -171,6 +122,7 @@ ul {
     z-index: 1;
     top: -650px;
 }
+
 .texth2{
     font-family: "Josefin Sans";
     text-align: center;
