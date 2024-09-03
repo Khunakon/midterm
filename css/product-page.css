@@ -271,7 +271,7 @@
 }
 
 .type-option {
-    font-size: 1.5em;
+    font-size: 1.0em;
     padding: 15px 30px;
     border: 1px solid #ffffff;
     background-color: transparent;
@@ -296,11 +296,11 @@
 }
 
 .buy-button{
+    background-color: #ffffff;
+    color: #d85757;
     font-size: 1.5em;
     padding: 15px 30px;
     border: 1px solid #ffffff;
-    background-color: transparent;
-    color: #ffffff;
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
