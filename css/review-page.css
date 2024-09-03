@@ -1,0 +1,99 @@
+.review-card{
+    width: 350px;
+    height: 350px;
+    border: 3px solid white;
+    border-radius: 100%;
+    background: linear-gradient(0deg, rgba(182,217,255,1) 0%, rgba(252,171,149,1) 40%, rgba(242,212,197,1) 100%);
+    position: relative;
+    text-align: center;
+    padding: 60px;
+    color: white;
+    font-family: "Noto Sans Thai";
+    z-index: 3;
+    left: 0px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    animation: float 4.5s ease-in-out infinite;
+    cursor: default;
+    float: left;
+}
+.review-card:hover{
+    animation: none;
+}
+.review-card h3{
+    font-size: 32px;
+    font-weight: normal;
+    margin-bottom: -5px;
+}
+.review-card p{
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+.review-card i{
+    margin-bottom: -20px;
+    margin-top: -10px;
+}
+
+.reviews-container1 {
+    width: 100%;
+    top: -500px;
+    position: relative;
+}
+
+.review-card1{
+    width: 350px;
+    height: 350px;
+    border: 3px solid white;
+    border-radius: 100%;
+    background: linear-gradient(0deg, rgba(182,217,255,1) 0%, rgba(252,171,149,1) 40%, rgba(242,212,197,1) 100%);
+    position: relative;
+    text-align: center;
+    padding: 60px;
+    color: white;
+    font-family: "Noto Sans Thai";
+    z-index: 2;
+    left: 0px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    /*animation: float 4.5s ease-in-out infinite;*/
+    cursor: default;
+    float: left;
+}
+
+.review-card2{
+    width: 350px;
+    height: 350px;
+    border: 3px solid white;
+    border-radius: 100%;
+    background: rgba(255,255,255,255) 100%;
+    position: relative;
+    text-align: center;
+    padding: 60px;
+    color: white;
+    font-family: "Noto Sans Thai";
+    z-index: 2;
+    left: 0px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    /*animation: float 4.5s ease-in-out infinite;*/
+    cursor: default;
+    float: left;
+}
+
+.review-flower1{
+    width: 400px;
+    height: 250px;
+    top: -20px;
+    angle: 20.56 deg;
+}
+.color-buttonon {
+     width: 35px;
+     height: 35px;
+     border-radius: 50%;
+     border: 2px solid #cccccc00;
+     background-size: cover;
+     background-position: center;
+     cursor: pointer;
+     transition: transform 0.3s ease;
+     z-index: 10;
+ }

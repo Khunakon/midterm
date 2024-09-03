@@ -3,10 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.css' integrity='sha512-8BU3emz11z9iF75b10oPjjpamM4Mz23yQFQymbtwyPN3mNWHxpgeqyrYnkIUP6A8KyAj5k2p3MiYLtYqew7gIw==' crossorigin='anonymous'/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet">
     <title>review</title>
-    <link rel="stylesheet" href="css/index-page.css">
+    <!-- Foundation CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js" crossorigin="anonymous"></script>
+    <!-- Foundation CSS -->
+    <link rel="stylesheet" href="css/all-page.css">
+    <link rel="stylesheet" href="css/nav-bar.css">
+    <link rel="stylesheet" href="css/review-page.css">
 </head>
 <body>
-    
+   <div class="grid-container">
+       <nav class="grid-x">
+           <div class="cell shrink">
+               <img id="site-logo" src="pic/logo (1).png" alt="logo" />
+           </div>
+           <div class="cell auto">
+               <div id="site-nav">
+                   <ul>
+                       <li class="menu-item active"><a href="index.html">Home</a></li>
+                       <li class="menu-item"><a href="product.html">Product</a></li>
+                       <li class="menu-item"><a href="customize.html">Customize</a></li>
+                       <!--<li class="menu-item"><a href="review.html">Review</a></li>-->
+                   </ul>
+               </div>
+           </div>
+           <div id="cart" class="cell shrink">
+               <div class="dropdown">
+                   <button class="dropbtn"><i class="fa-solid fa-cart-shopping"></i></button>
+                   <div class="dropdown-content">
+                       <div class="cart-item">
+                           <span>Lip Colormuse</span>
+                           <div class="quantity-controls">
+                               <button class="minus-btn" onclick="updateQuantity(-1)">-</button>
+                               <input type="text" id="quantity" value="1" readonly>
+                               <button class="plus-btn" onclick="updateQuantity(1)">+</button>
+                           </div>
+                       </div>
+                       <button class="go-to-cart">go to cart</button>
+                   </div>
+               </div>
+           </div>
+       </nav>
+   </div>
+    <div class="grid-container">
+        <h1>ลองแล้วชอบ?</h1>
+        <div class="grid-x">
+            <div class="cell large-1">&nbsp;</div>
+            <h1 class="cell sub large-11">แบ่งปันความประทับใจขอบคุณกับเรา</h1>
+        </div>
+       <div class="grid-x">
+            <div class="review-card1">
+                <h4>แชร์ความรู้</h4>
+                <h4>แสดงความประทับใจ</h4>
+                <h4>และประสบการณ์กับเรา</h4>
+                <div class="">
+                    <i class="fa-solid fa-plus"></i>
+                    <!--plus button-->
+                </div>
+            </div>
+            <div class="review-card2">
+                <h4 class="cell" style="color: #BA3F38">แชร์รูปภาพ</h4>
+                <h4 class="cell" style="color: #BA3F38">แสดงสีสันของตัวคุณ</h4>
+                <div>
+                    <!--plus button-->
+                </div>
+            </div>
+       </div>
+    </div>
 </body>
 </html>
