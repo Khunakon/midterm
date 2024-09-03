@@ -15,16 +15,15 @@
 }
 
 html {
-    height: 100%;
+    height: auto;
+    background: linear-gradient(0deg, rgba(182,217,255,1) 0%, rgba(252,171,149,1) 40%, rgba(242,212,197,1) 100%);
 }
 
 body {
     margin: 0;
     padding:0;
-    height: 100%;
     font-family: "Josefin Sans";
-    #background: rgb(182,217,255);
-    background: linear-gradient(0deg, rgba(182,217,255,1) 0%, rgba(252,171,149,1) 40%, rgba(242,212,197,1) 100%);
+   background-color: rgba(0, 0, 0, 0);
 }
 
 .grid-container {

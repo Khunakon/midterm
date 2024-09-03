@@ -66,8 +66,8 @@ function goToPage(page) {
             <h1 class="cell" style="text-align:center">
                 สีสันที่คุณสร้างเองได้
             </h1>
-            <h1 class="sub cell large-6" style="text-align:right;padding-right:80px">Customize</h1>
-            <h1 class="sub cell large-6" style="text-align:left;padding-left:80px">Your Shade</h1>
+            <h1 class="sub cell large-6" style="text-align:right;padding-right:80px; font-family: Josefin Sans">Customize</h1>
+            <h1 class="sub cell large-6" style="text-align:left;padding-left:80px; font-family: Josefin Sans">Your Shade</h1>
         </div>
         <div style="margin-top:-250px;margin-left:-60px">
             <img src="pic/lip3d.gif" alt="lip3d" style="max-width:unset;display:unset"/>
@@ -82,7 +82,7 @@ function goToPage(page) {
         <div class="grid-x grid-margin-x grid-padding-x">
             <div class="cell large-8">&nbsp</div>
             <div class="cell large-4">
-                <button style="margin-left:30px" class="button primary"
+                <button style="margin-left:30px; background-color: #D8323C;" class="button primary"
                         type="button" onclick="goToPage('customize.html')">Customize and Buy Now</button>
             </div>
         </div>
@@ -96,14 +96,81 @@ function goToPage(page) {
         </div>
         <div class="grid-x">
             <div class="cell large-4">&nbsp</div>
-            <h2 class="sub cell large-8">Choose Your Shade, Define Your Look</h2>
+            <h2 class="sub cell large-8" style="font-family: Josefin Sans">Choose Your Shade, Define Your Look</h2>
         </div>
         <div class="grid-x">
-            <div class="cell large-5">&nbsp</div>
-            <div class="sub cell large-7">
-                <h5>นอกจากปรับแต่งสีลิปสติกได้ตามใจคุณแล้ว ลิบของเรา ยังมาพร้อมกับ</h5>
-                <h5>เฉดสี ...</h5>
+            <div class="cell large-5" style="background-image: url(pic/color.png);">
+                    <img id="product-image" src="image/default.png" alt="Product Image">
             </div>
+            <div class="sub cell large-7" style="margin: 50px 0 0 0px;">
+                <h5>นอกจากปรับแต่งสีลิปสติกได้ตามใจคุณแล้ว ลิบของเรา ยังมาพร้อมกับ</h5>
+                <h5>เฉดสีที่คัดสรรมาเป็นพิเศษถึง 18 สี ซึ่งถูกออกแบบมาเพื่อตอบโจทย์ทุกสไตล์</h5>
+                <h5>และทุกโอกาส ไม่ว่าคุณจะต้องการลุคที่ดูสดใส โดดเด่น หรือสุภาพอ่อนหวาน</h5>
+                <h5>ลิปของเรา ก็มีสีที่เหมาะสมรอให้คุณเลือกใช้</h5>
+                <div class="button-container" style="margin: 80px 0 0 150px;">
+                    <button class="color-button" id="color1" data-image="image/image1.png" ></button>
+                    <button class="color-button" id="color2" data-image="image/image2.png"></button>
+                    <button class="color-button" id="color3" data-image="image/image3.png"></button>
+                    <button class="color-button" id="color4" data-image="image/image4.png"></button>
+                    <button class="color-button" id="color5" data-image="image/image5.png"></button>
+                    <button class="color-button" id="color6" data-image="image/image6.png"></button>
+                    <button class="color-button" id="color7" data-image="image/image7.png"></button>
+                    <button class="color-button" id="color8" data-image="image/image8.png"></button>
+                    <button class="color-button" id="color9" data-image="image/image9.png"></button>
+                    <button class="color-button" id="color10" data-image="image/image10.png"></button>
+                    <button class="color-button" id="color11" data-image="image/image11.png"></button>
+                    <button class="color-button" id="color12" data-image="image/image12.png"></button>
+                    <button class="color-button" id="color13" data-image="image/image13.png"></button>
+                    <button class="color-button" id="color14" data-image="image/image14.png"></button>
+                    <button class="color-button" id="color15" data-image="image/image15.png"></button>
+                    <button class="color-button" id="color16" data-image="image/image16.png"></button>
+                    <button class="color-button" id="color17" data-image="image/image17.png"></button>
+                    <button class="color-button" id="color18" data-image="image/image18.png"></button>
+                </div><!--color container-->
+                <button style="margin:80px 0 0 225px; background-color: #D8323C;" class="button primary"
+                        type="button" onclick="goToPage('product.html')">View our Product</button>
+                        <script src="script.js"></script>
+            </div>
+        </div>
+        <div class="grid-x">
+            <div class="cell" style="background-color: white; height: 1px; margin-top: 70px;">
+            </div>               
+        </div>
+        <div class="grid-x" style="margin-top: 50px;">
+            <div class="cell large-1"></div>
+            <div class="cell large-10" style="text-align: center;">
+                <h1 style="font-size: 60px;">รีวิวจากผู้ใช้จริง ความประทับใจที่อยากแชร์</h1>
+                <h2 style="font-size: 48px; font-family: Josefin Sans;">Read Real Reviews from ColorMuse Users</h2>
+            </div>
+            <div class="cell large-1"></div>
+        </div>
+        <div class="grid-x" style="margin-top: 100px;">
+               <div class="cell large-7">
+                   <img src="review-image/review1.png" alt="review" style="margin-left: 80px;">
+               </div>
+               <div class="cell large-5" style="position: relative; display: flex; justify-content: center; animation: float 5s ease-in-out infinite;">
+                   <img src="review-image/flower-right.png" alt="review-flower">
+               </div>
+        </div><!--review1-->
+        <div class="grid-x" style="margin-top: 100px;">
+               <div class="cell large-5" style="position: relative; display: flex; justify-content: center; animation: float 8s ease-in-out infinite;">
+                   <img src="review-image/flower-left.png" alt="review-flower">
+               </div>
+               <div class="cell large-7">
+                   <img src="review-image/review2.png" alt="review" style="margin-left: 80px;">
+               </div>
+        </div><!--review2-->
+        <div class="grid-x" style="margin-top: 100px;">
+               <div class="cell large-7">
+                   <img src="review-image/review3.png" alt="review" style="margin-left: 80px;">
+               </div>
+               <div class="cell large-5" style="position: relative; display: flex; justify-content: center; animation: float 4s ease-in-out infinite;">
+                   <img src="review-image/flower-right.png" alt="review-flower">
+               </div>
+        </div><!--review3-->
+        <div class="grid-x" style="padding: 0 40% 0 40%; margin-top: 80px;">
+            <div class="cell"> <button style="margin-left:80px; background-color: #D8323C;" class="button primary"
+                type="button" onclick="goToPage('review-page.html')">Go To Review</button></div>
         </div>
     </div>
 </body>
