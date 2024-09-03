@@ -30,63 +30,81 @@ function goToPage(page) {
     </script>
 </head>
 <body>
-<div class="grid-container">
-    <nav class="grid-x">
-        <div class="cell shrink">
-            <img id="site-logo" src="pic/logo (1).png" alt="logo" />
-        </div>
-        <div class="cell auto">
-            <div id="site-nav">
-                <ul>
-                    <li class="menu-item active"><a href="index.html">Home</a></li>
-                    <li class="menu-item"><a href="product.html">Product</a></li>
-                    <li class="menu-item"><a href="customize.html">Customize</a></li>
-                    <!--<li class="menu-item"><a href="review.html">Review</a></li>-->
-                </ul>
+    <div class="grid-container">
+        <nav class="grid-x">
+            <div class="cell shrink">
+                <img id="site-logo" src="pic/logo (1).png" alt="logo" />
             </div>
-        </div>
-        <div id="cart" class="cell shrink">
-            <div class="dropdown">
-                <button class="dropbtn"><i class="fa-solid fa-cart-shopping"></i></button>
-                <div class="dropdown-content">
-                    <div class="cart-item">
-                        <span>Lip Colormuse</span>
-                        <div class="quantity-controls">
-                            <button class="minus-btn" onclick="updateQuantity(-1)">-</button>
-                            <input type="text" id="quantity" value="1" readonly>
-                            <button class="plus-btn" onclick="updateQuantity(1)">+</button>
-                        </div>
-                    </div>
-                    <button class="go-to-cart">go to cart</button>
+            <div class="cell auto">
+                <div id="site-nav">
+                    <ul>
+                        <li class="menu-item active"><a href="index.html">Home</a></li>
+                        <li class="menu-item"><a href="product.html">Product</a></li>
+                        <li class="menu-item"><a href="customize.html">Customize</a></li>
+                        <!--<li class="menu-item"><a href="review.html">Review</a></li>-->
+                    </ul>
                 </div>
             </div>
+            <div id="cart" class="cell shrink">
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fa-solid fa-cart-shopping"></i></button>
+                    <div class="dropdown-content">
+                        <div class="cart-item">
+                            <span>Lip Colormuse</span>
+                            <div class="quantity-controls">
+                                <button class="minus-btn" onclick="updateQuantity(-1)">-</button>
+                                <input type="text" id="quantity" value="1" readonly>
+                                <button class="plus-btn" onclick="updateQuantity(1)">+</button>
+                            </div>
+                        </div>
+                        <button class="go-to-cart">go to cart</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="grid-x" style="margin-top:50px">
+            <h1 class="cell" style="text-align:center">
+                สีสันที่คุณสร้างเองได้
+            </h1>
+            <h1 class="sub cell large-6" style="text-align:right;padding-right:80px">Customize</h1>
+            <h1 class="sub cell large-6" style="text-align:left;padding-left:80px">Your Shade</h1>
         </div>
-    </nav>
-    <div class="grid-x" style="margin-top:50px">
-        <h1 class="cell" style="text-align:center">
-            สีสันที่คุณสร้างเองได้
-        </h1>
-        <h1 class="sub cell large-6" style="text-align:right;padding-right:80px">Customize</h1>
-        <h1 class="sub cell large-6" style="text-align:left;padding-left:80px">Your Shade</h1>
-    </div>
-    <div style="margin-top:-250px;margin-left:-60px">
-        <img src="pic/lip3d.gif" alt="lip3d" style="max-width:unset;display:unset"/>
-    </div>
-    <div class="grid-x" style="margin-top:-400px">
-        <div class="cell large-4" style="text-align:right">
-            <h4>เลือกลิปสติกในเฉดสีที่เป็นเอกลักษณ์</h4>
-            <h4>ตามสไตล์ของคุณเอง</h4>
-            <h4>สร้างลุคที่เป็นตัวเองไม่ซ้ำใคร</h4>
+        <div style="margin-top:-250px;margin-left:-60px">
+            <img src="pic/lip3d.gif" alt="lip3d" style="max-width:unset;display:unset"/>
+        </div>
+        <div class="grid-x" style="margin-top:-400px">
+            <div class="cell large-4" style="text-align:right">
+                <h4>เลือกลิปสติกในเฉดสีที่เป็นเอกลักษณ์</h4>
+                <h4>ตามสไตล์ของคุณเอง</h4>
+                <h4>สร้างลุคที่เป็นตัวเองไม่ซ้ำใคร</h4>
+            </div>
+        </div>
+        <div class="grid-x grid-margin-x grid-padding-x">
+            <div class="cell large-8">&nbsp</div>
+            <div class="cell large-4">
+                <button style="margin-left:30px" class="button primary"
+                        type="button" onclick="goToPage('customize.html')">Customize and Buy Now</button>
+            </div>
+        </div>
+        <div class="grid-x" style="margin-top:150px">
+            <div class="cell large-4">&nbsp</div>
+            <div class="cell large-8" style="height:1px;background-color:white">&nbsp</div>
+        </div>
+        <div class="grid-x" style="margin-top:20px">
+            <div class="cell large-3">&nbsp</div>
+            <h2 class="cell large-9">เลือกสีที่ใช่ สร้างลุคที่เป็นคุณ</h2>
+        </div>
+        <div class="grid-x">
+            <div class="cell large-4">&nbsp</div>
+            <h2 class="sub cell large-8">Choose Your Shade, Define Your Look</h2>
+        </div>
+        <div class="grid-x">
+            <div class="cell large-5">&nbsp</div>
+            <div class="sub cell large-7">
+                <h5>นอกจากปรับแต่งสีลิปสติกได้ตามใจคุณแล้ว ลิบของเรา ยังมาพร้อมกับ</h5>
+                <h5>เฉดสี ...</h5>
+            </div>
         </div>
     </div>
-    <div class="grid-x grid-margin-x grid-padding-x">
-        <div class="cell large-8">&nbsp</div>
-        <div class="cell large-4">
-            <button style="margin-left:30px" class="button primary"
-                    type="button" onclick="goToPage('customize.html')">Customize and Buy Now</button>
-        </div>
-    </div>
-
-</div>
 </body>
 </html>

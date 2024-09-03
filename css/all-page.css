@@ -23,7 +23,7 @@ body {
     padding:0;
     height: 100%;
     font-family: "Josefin Sans";
-    background: rgb(182,217,255);
+    #background: rgb(182,217,255);
     background: linear-gradient(0deg, rgba(182,217,255,1) 0%, rgba(252,171,149,1) 40%, rgba(242,212,197,1) 100%);
 }
 
@@ -36,9 +36,7 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
 }
 
-h1 {
-    font-size: 80px;
-}
-h1.sub {
-    font-size: 70px;
-}
+h1 { font-size: 80px; }
+h2 { font-size: 50px; }
+h2.sub { font-size: 35px; }
+h1.sub { font-size: 70px; }
